@@ -9,8 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact | SMARTSIDE</title>
 
-       <!-- favicon -->
-       <link rel="icon" href="img/smartside-logo/Logomark2TransCropped.png" type="image/x-icon">
+    <!-- favicon -->
+    <link rel="icon" href="img/smartside-logo/Logomark2TransCropped.png" type="image/x-icon">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
@@ -156,20 +156,95 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="contact__map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2798902705!2d-74.25986790365917!3d40.697670067823786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1596152431947!5m2!1sen!2sbd"
-                            height="450" style="border:0;"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31323.427440484767!2d76.9016260530117!3d11.081412722970066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f66af1487f91%3A0xf88c8d829607bf3!2sThudiyalur%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sbd!4v1728678405599!5m2!1sen!2sbd"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="contact__form">
                         <h3>Get in touch</h3>
-                        <form action="#">
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="Email">
-                            <input type="text" placeholder="Website">
-                            <textarea placeholder="Message"></textarea>
-                            <button type="submit" class="site-btn">Send Message</button>
+                        <form id="myForm" action="#">
+                            <span id="fromEmailError" class="error-message" style="color:red; display:none;"></span> <!-- Error message for email -->
+                            <input type="email" id="fromEmail" placeholder="Your Email" required>
+                           
+                            <input type="text" id="toEmail" value="team@smartside.in" readonly>
+                            
+                            <span id="subjectError" class="error-message" style="color:red; display:none;"></span> <!-- Error message for subject -->
+                            <input type="text" id="subject" placeholder="Subject" required> <!-- Required field -->
+                            
+                            <span id="bodyError" class="error-message" style="color:red; display:none;"></span> <!-- Error message for body -->
+                            <textarea id="body" placeholder="Message" required></textarea> <!-- Required field -->
+                        
+                            <a href="#" class="primary-btn" id="sendMessageBtn">Send Message <i class="fas fa-paper-plane"></i></a>
                         </form>
+                        
+                        <script>
+                        document.getElementById('sendMessageBtn').addEventListener('click', function (event) {
+                            event.preventDefault(); // Prevent the default form submission behavior
+                        
+                            // Clear previous error messages
+                            document.getElementById('fromEmailError').innerText = '';
+                            document.getElementById('subjectError').innerText = '';
+                            document.getElementById('bodyError').innerText = '';
+                        
+                            const fromEmail = document.getElementById('fromEmail').value;
+                            const subject = document.getElementById('subject').value;
+                            const body = document.getElementById('body').value;
+                        
+                            let hasError = false; // Flag to check if there are errors
+                        
+                            // Check if the required fields are filled
+                            if (!fromEmail) {
+                                document.getElementById('fromEmailError').innerText = '* Please enter your email address.'; // Show error message
+                                document.getElementById('fromEmailError').style.display = 'block'; // Display the error message
+                                hasError = true;
+                            }
+                            if (!subject) {
+                                document.getElementById('subjectError').innerText = '* Please enter a subject.'; // Show error message
+                                document.getElementById('subjectError').style.display = 'block'; // Display the error message
+                                hasError = true;
+                            }
+                            if (!body) {
+                                document.getElementById('bodyError').innerText = '* Please enter a message.'; // Show error message
+                                document.getElementById('bodyError').style.display = 'block'; // Display the error message
+                                hasError = true;
+                            }
+                        
+                            if (hasError) {
+                                return; // Prevent form submission if there are errors
+                            }
+                        
+                            const toEmail = document.getElementById('toEmail').value; // Use the default email
+                        
+                            // Detect if the user is on a mobile device
+                            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                        
+                            let mailtoLink;
+                        
+                            if (isMobile) {
+                                // Use mailto for mobile devices
+                                mailtoLink = `mailto:${encodeURIComponent(toEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}%0D%0A%0D%0AFrom: ${encodeURIComponent(fromEmail)}`;
+                            } else {
+                                // Use Gmail-specific link for desktop
+                                mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${encodeURIComponent(toEmail)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}&bcc=${encodeURIComponent(fromEmail)}`;
+                            }
+                        
+                            // Open the appropriate mail client
+                            window.open(mailtoLink, '_blank');
+                        });
+                        </script>
+                        
+                        <style>
+                            /* Optional: Styling for the error message */
+                            .error-message {
+                                color: red;
+                                display: block; /* Change display to block to ensure it occupies space */
+                                margin-top: 5px; /* Add some space between the input and error message */
+                                font-size: 0.9em; /* Adjust font size if needed */
+                            }
+                        </style>
+                        
                     </div>
                 </div>
             </div>
@@ -206,7 +281,7 @@
                             <p>Formed in 2023,for crafting innovative software solutions dedicated to meet the
                                 evolving needs of businesses and individuals. With a passion for technology and a
                                 commitment to excellence, we build intuitive, scalable products designed to empower our
-                                clients.</p>
+                                clients...</p>
                             <a href="about.html" class="read__more">Read more <span class="arrow_right"></span></a>
                         </div>
                     </div>
@@ -226,10 +301,10 @@
                         <div class="footer__option__item">
                             <h5>Our works</h5>
                             <ul>
-                                <li><a href="#">GK wedding & event Management</a></li>
-                                <li><a href="#">Latest</a></li>
-                                <li><a href="#">Browse Archive</a></li>
-                                <li><a href="#">Video for web</a></li>
+                                <li><a href="https://gkevents.netlify.app/" target="_blank">GK Wedding & Event Management</a></li>
+                                <li><a href="https://startupculturefoundation.in/" target="_blank">StartUp Culture Foundation</a></li>
+                                <li><a href="https://grcsolutions.in/" target="_blank">GEEARR Consumer Solutions</a></li>
+                                <li><a href="https://sociopotents.in/" target="_blank">Socio Potent</a></li>
                             </ul>
                         </div>
                     </div>
@@ -241,8 +316,10 @@
                                 <li><strong style="color: #ffbb12;">Address:</strong><a
                                         href="https://www.google.com/maps/place/Thudiyalur,+Tamil+Nadu,+India/@11.0814127,76.9016261,14z/data=!3m1!4b1!4m15!1m8!3m7!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!2sNew+York,+NY,+USA!3b1!8m2!3d40.7127753!4d-74.0059728!16zL20vMDJfMjg2!3m5!1s0x3ba8f66af1487f91:0xf88c8d829607bf3!8m2!3d11.0802453!4d76.941513!16zL20vMGY2Z3Ru?hl=en&entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D">
                                         Coimbatore - 641017</a></li>
-                                <li><strong  style="color: #ffbb12;">Phone:</strong><a href="tel:+91 93613 27770"> +91 93613 27770</a></li>
-                                <li><strong  style="color: #ffbb12;">Email:</strong><a href="mailto:team@smartside.in"> team@smartside.in</a></li>
+                                <li><strong style="color: #ffbb12;">Phone:</strong><a href="tel:+91 93613 27770"> +91
+                                        93613 27770</a></li>
+                                <li><strong style="color: #ffbb12;">Email:</strong><a href="mailto:team@smartside.in">
+                                        team@smartside.in</a></li>
                             </ul>
                         </div>
                     </div>
@@ -257,8 +334,8 @@
                             <script>
                                 document.write(new Date().getFullYear());
                             </script>
-                            All rights reserved | Developed with <i class="fa fa-heart-o"
-                                aria-hidden="true"></i> by <a href="#" target="_blank">Smartside</a>
+                            All rights reserved | Developed with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+                                href="#" target="_blank">Smartside</a>
                         </p>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </div>
