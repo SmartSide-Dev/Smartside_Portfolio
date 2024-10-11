@@ -1128,7 +1128,7 @@ ol {
 }
 .callto.sp__callto {
   padding-top: 0;
-  background: #100028;
+  background: #000000;
 }
 
 .callto__text h2 {
@@ -1145,8 +1145,19 @@ ol {
   text-transform: uppercase;
   margin-bottom: 55px;
 }
-.callto__text a {
-  color: #ffffff;
+@media (max-width: 768px) {
+  .callto__text h2 {
+    color: #ffffff;
+    font-size: 20px;
+  }
+  .callto__text p {
+    font-size: 13px;
+    color: #ffffff;
+  }
+}
+
+/* .callto__text a {
+  color: #000000;
   background: #FFBB12;
   font-size: 15px;
   font-weight: 700;
@@ -1155,7 +1166,60 @@ ol {
   text-transform: uppercase;
   display: inline-block;
   padding: 14px 32px 12px;
+} */
+.calltoAction-btn {
+  display: inline-block;
+  font-size: 15px;
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  padding: 14px 32px 12px;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+  background: #FFBB12;
 }
+.calltoAction-btn:hover {
+  color: #ffffff;
+}
+.calltoAction-btn:hover:before {
+  height: 100%;
+  width: 100%;
+}
+.calltoAction-btn:hover:after {
+  height: 100%;
+  width: 100%;
+}
+.calltoAction-btn:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 30px;
+  width: 30px;
+  border-left: 2px solid #000000;
+  border-top: 2px solid #000000;
+  content: "";
+  z-index: -1;
+  -webkit-transition: all, 0.7s;
+  -o-transition: all, 0.7s;
+  transition: all, 0.7s;
+}
+.calltoAction-btn:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 30px;
+  width: 30px;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  content: "";
+  z-index: -1;
+  -webkit-transition: all, 0.7s;
+  -o-transition: all, 0.7s;
+  transition: all, 0.7s;
+}
+
 
 /*---------------------
   Footer
@@ -1485,6 +1549,7 @@ ol {
 
 .services__item {
   margin-bottom: 45px;
+  text-align: center;
 }
 .services__item:hover .services__item__icon:after {
   -webkit-transform: rotate(45deg);
@@ -1508,6 +1573,7 @@ ol {
   width: 70px;
   line-height: 70px;
   text-align: center;
+  margin: 0 auto;
 }
 .services__item__icon:after {
   position: absolute;
@@ -1596,15 +1662,29 @@ ol {
   Logo
 -----------------------*/
 .logo {
-  background: #100028;
+  background: #000000;
   padding: 100px 20px;
 }
 
+
 .logo__carousel.owl-carousel .owl-item img {
-  width: auto;
+  max-width: 200px;
+  height: auto;
   display: inline-block;
+  vertical-align: middle;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .logo-container {
+    flex-wrap: wrap;
+    justify-content: center;
+     gap: 20px;
+  }
+}
 /*---------------------
   Portfolio
 -----------------------*/
