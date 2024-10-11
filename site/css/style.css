@@ -834,103 +834,89 @@ ol {
   padding-bottom: 80px;
 }
 
-
 .project__item {
+  border: 1px solid #222222;
+  padding: 40px 48px 35px 30px;
   position: relative;
+  z-index: 1;
   margin-bottom: 45px;
-  height: 260px; /* Fixed height for consistent layout */
-  overflow: hidden; /* Hide overflow */
-  background-color: #000; /* Optional background color */
-  border-radius: 5px;
+  background-color: transparent; /* Keep background transparent */
+  background-size: cover; /* Make sure the image covers the entire area */
+  background-position: center; /* Center the background image */
+  overflow: hidden; /* Hide any overflow */
+  transition: transform 0.3s ease; /* Smooth transition for scale effect */
+}
+/* Background images for each project */
+.project__item.project1:hover {
+  border-radius: 10px 10px 0 10px; 
 }
 
-.project__item.project1 {
-  /* Background for project 1 */
-  background-image: url('../img/project/GK.png');
-   background-size: cover;
-    background-position: center;
+.project__item.project2:hover {
+  border-radius: 10px 10px 10px 0 ; 
 }
 
-.project__item.project2 {
-  /* Background for project 2 */
-  background-image: url('../img/project/StartupCulture.png');
-   background-size: cover;
-    background-position: center;
+.project__item.project3:hover {
+  border-radius: 10px 0 10px 10px; 
 }
 
-.project__item.project3 {
-  /* Background for project 3 */
-  background-image: url('../img/project//SocioPotent.png');
-   background-size: cover;
-    background-position: center;
+.project__item.project4:hover {
+  border-radius:0 10px 10px  10px; 
 }
 
-.project__item.project4 {
-  /* Background for project 4 */
-  background-image: url('../img/project/GRCS.png');
-   background-size: cover;
-    background-position: center;
-}
-/* Overlay styles */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
-  color: #ffffff; /* White text color */
-  padding: 20px; /* Padding for content */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* Align content to the bottom */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+/* Background images for each project */
+.project__item.project1:not(:hover) {
+  background: url(../img/project/GK.png) no-repeat;
+  background-size: cover;
+  border-radius: 10px 10px 0 10px; 
 }
 
-/* Show overlay on hover */
-.project__item:hover .overlay {
-  opacity: 1; /* Show overlay */
+.project__item.project2:not(:hover) {
+  background: url(../img/project/StartupCulture.png) no-repeat;
+  background-size: cover;
+  border-radius: 10px 10px 10px 0 ; 
 }
 
-/* Text styles */
-.overlay h4,
-.overlay ul li,
-.overlay p,
-.overlay a {
-  color: #ffffff; /* Ensure text is white on hover */
-  margin: 0; /* Remove margin for better alignment */
+.project__item.project3:not(:hover) {
+  background: url(../img/project/SocioPotent.png) no-repeat;
+  background-size: cover;
+  border-radius: 10px 0 10px 10px; 
 }
 
-/* Button styles */
-.overlay a {
-  font-size: 16px;
-  color: #ffffff;
+.project__item.project4:not(:hover) {
+  background: url(../img/project/GRCS.png) no-repeat;
+  background-size: cover;
+  border-radius:0 10px 10px  10px; 
 }
 
-/* Scale up on hover */
-.project__item:hover {
-  transform: scale(1.05); /* Optional scaling effect */
+/* Initially hide text content */
+.project__item h4,
+.project__item ul,
+.project__item p,
+.project__item a {
+  opacity: 0; /* Hide text content */
+  transition: opacity 0.3s ease; /* Smooth transition for visibility */
 }
 
+/* Show text content on hover */
+.project__item:hover h4,
+.project__item:hover ul,
+.project__item:hover p,
+.project__item:hover a {
+  opacity: 1; /* Show text content */
+  color: #ffffff; /* Change text color on hover */
+}
 
+/* Existing styles for hover effects */
+.project__item.latest__item:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
 
-.project__item:hover ul li {
-  color: #ffffff;
+/* Ensure the hover effect does not hide the background */
+.project__item.latest__item:hover {
+  border: 1px solid #ffbb12 !important;
 }
-.project__item:hover p {
-  color: #ffffff;
-}
-.project__item h4 {
-  color: #ffffff;
-  font-weight: 700;
-  line-height: 31px;
-  margin-bottom: 18px;
-}
-.project__item ul {
-  margin-bottom: 20px;
-}
-.project__item ul li {
+
+.project__item.latest__item ul li {
   color: #777777;
   list-style: none;
   font-size: 14px;
@@ -939,28 +925,34 @@ ol {
   position: relative;
   display: inline-block;
 }
-.project__item ul li:after {
+
+.project__item.latest__item ul li:after {
   position: absolute;
   right: -16px;
   top: 0px;
   content: "/";
 }
-.project__item ul li:last-child {
+
+.project__item.latest__item ul li:last-child {
   margin-right: 0;
 }
-.project__item ul li:last-child:after {
+
+.project__item.latest__item ul li:last-child:after {
   display: none;
 }
-.project__item p {
+
+.project__item.latest__item p {
   font-weight: 300;
   line-height: 29px;
   margin-bottom: 22px;
 }
-.project__item a {
+
+.project__item.latest__item a {
   font-size: 16px;
   color: #ffffff;
 }
-.project__item a span {
+
+.project__item.latest__item a span {
   font-size: 16px;
   color: #ffffff;
   opacity: 0.5;
@@ -972,16 +964,94 @@ ol {
 .project__item.latest__item {
   margin-bottom: 0;
 }
-.project__item.latest__item:hover {
-  transform: scale(1.05); /* Scale up on hover */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Optional shadow effect */
-  border: 1px solid #222222 !important;
-}
 
-.project__item.latest__item .primary-btn:hover{
+.project__item.latest__item .primary-btn:hover {
   transition: all 0.5s ease;
   letter-spacing: 3px;
   color: #ffbb12;
+}
+
+
+/* Additional responsive styles */
+@media (max-width: 768px) {
+  .project__item {
+    padding: 20px; /* Adjust padding for mobile */
+  }
+  .seperate__item {
+    margin-bottom: 20px; /* Adjust margin for mobile */
+  }
+
+  /* Initially hide text content */
+.project__item h4,
+.project__item ul,
+.project__item p,
+.project__item a {
+  opacity: 1; /* Show text content */
+  color: #ffffff; /* Change text color on hover */
+ 
+}
+
+/* Show text content on hover */
+.project__item:hover h4,
+.project__item:hover ul,
+.project__item:hover p,
+.project__item:hover a {
+  opacity: 1; /* Hide text content */
+  transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+.project__item.latest__item:not(:hover) {
+  border: 1px solid #ffbb12 !important;
+}
+
+
+  /* Background images for each project */
+
+  /* Background images for each project */
+/* .project__item.project1:hover {
+  background: url(../img/project/GK.png) no-repeat;
+  background-size: cover;
+  border-radius: 10px; 
+}
+
+.project__item.project2:hover {
+  background: url(../img/project/StartupCulture.png) no-repeat;
+  background-size: cover;
+  border-radius: 10px; 
+}
+
+.project__item.project3:hover {
+  background: url(../img/project/SocioPotent.png) no-repeat;
+  background-size: cover;
+  border-radius: 10px; 
+}
+
+.project__item.project4:hover {
+  background: url(../img/project/GRCS.png) no-repeat;
+  background-size: cover;
+  border-radius: 10px; 
+} */
+
+
+.project__item.project1:not(:hover) {
+  border-radius: 10px; 
+  background: none;
+}
+
+.project__item.project2:not(:hover) {
+  border-radius: 10px ; 
+  background: none;
+}
+
+.project__item.project3:not(:hover) {
+  border-radius: 10px; 
+  background: none;
+}
+
+.project__item.project4:not(:hover) {
+  border-radius:10px; 
+  background: none;
+}
 }
 
 
