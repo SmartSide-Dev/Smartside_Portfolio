@@ -836,17 +836,85 @@ ol {
 
 
 .project__item {
-  border: 1px solid #222222;
-  padding: 40px 48px 35px 30px;
   position: relative;
-  z-index: 1;
   margin-bottom: 45px;
+  height: 260px; /* Fixed height for consistent layout */
+  overflow: hidden; /* Hide overflow */
+  background-color: #000; /* Optional background color */
+  border-radius: 5px;
 }
+
+.project__item.project1 {
+  /* Background for project 1 */
+  background-image: url('../img/project/GK.png');
+   background-size: cover;
+    background-position: center;
+}
+
+.project__item.project2 {
+  /* Background for project 2 */
+  background-image: url('../img/project/StartupCulture.png');
+   background-size: cover;
+    background-position: center;
+}
+
+.project__item.project3 {
+  /* Background for project 3 */
+  background-image: url('../img/project//SocioPotent.png');
+   background-size: cover;
+    background-position: center;
+}
+
+.project__item.project4 {
+  /* Background for project 4 */
+  background-image: url('../img/project/GRCS.png');
+   background-size: cover;
+    background-position: center;
+}
+/* Overlay styles */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+  color: #ffffff; /* White text color */
+  padding: 20px; /* Padding for content */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to the bottom */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+/* Show overlay on hover */
+.project__item:hover .overlay {
+  opacity: 1; /* Show overlay */
+}
+
+/* Text styles */
+.overlay h4,
+.overlay ul li,
+.overlay p,
+.overlay a {
+  color: #ffffff; /* Ensure text is white on hover */
+  margin: 0; /* Remove margin for better alignment */
+}
+
+/* Button styles */
+.overlay a {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* Scale up on hover */
 .project__item:hover {
-  border: 1px solid transparent !important;
-  background: url(../img/blog/blog-2.jpg) no-repeat;
-  background-size: cover;
+  transform: scale(1.05); /* Optional scaling effect */
 }
+
+
+
 .project__item:hover ul li {
   color: #ffffff;
 }
@@ -905,10 +973,9 @@ ol {
   margin-bottom: 0;
 }
 .project__item.latest__item:hover {
-  border: 1px solid #222222 !important;
-  background: url(../img/blog/blog-1.jpg);
-  background-size: cover;
   transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Optional shadow effect */
+  border: 1px solid #222222 !important;
 }
 
 .project__item.latest__item .primary-btn:hover{
