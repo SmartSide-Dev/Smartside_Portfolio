@@ -47,16 +47,16 @@
     });
 
     /*------------------
-		Navigation
-	--------------------*/
+        Navigation
+    --------------------*/
     $(".mobile-menu").slicknav({
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
 
     /*------------------
-		Hero Slider
-	--------------------*/
+        Hero Slider
+    --------------------*/
     $('.hero__slider').owlCarousel({
         loop: true,
         dots: true,
@@ -65,10 +65,14 @@
         animateIn: 'fadeIn',
         items: 1,
         margin: 0,
-        smartSpeed: 1200,
+        smartSpeed: 1000,
         autoHeight: false,
         autoplay: true,
-    });
+        mouseDrag: false, // Disable mouse drag
+        touchDrag: false, // Disable touch drag
+        pullDrag: false, // Optional: Disable pull effect while dragging
+        freeDrag: false, // Optional: Disable drag by mouse click
+        });
 
     var dot = $('.hero__slider .owl-dot');
     dot.each(function () {
