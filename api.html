@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>API Request</title>
 </head>
 
 <body>
     <h1>API Request</h1>
-    <button>appiiiii</button>
+    <button id="apiButton">Send API Request</button>
 
     <script>
         const url = 'https://smartside.netlify.app/api'; // Replace with your API endpoint
@@ -20,13 +20,15 @@
             role: 'admin'
         };
 
-        fetch(url, {
-            method: 'POST', // HTTP method
-            headers: {
-                'Content-Type': 'application/json' // Setting content type to JSON
-            },
-            body: JSON.stringify(data) // Sending the request body as a string
-        })
+        // Function to hit the API
+        function sendApiRequest() {
+            fetch(url, {
+                method: 'POST', // HTTP method
+                headers: {
+                    'Content-Type': 'application/json' // Setting content type to JSON
+                },
+                body: JSON.stringify(data) // Sending the request body as a string
+            })
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -39,7 +41,10 @@
             .catch(error => {
                 console.error('Error:', error); // Handle error
             });
+        }
 
+        // Add event listener to the button
+        document.getElementById('apiButton').addEventListener('click', sendApiRequest);
     </script>
 </body>
 
