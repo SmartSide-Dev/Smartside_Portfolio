@@ -185,6 +185,11 @@
 
 })(jQuery);
 
+
+    /*------------------
+        Smooth Scroll behavior
+    --------------------*/
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -196,3 +201,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
+ /*------------------
+        Scroll to Top
+    --------------------*/
+
+    // Show/hide button on scroll
+window.onscroll = function() {
+    const scrollBtn = document.querySelector('.scroll-to-top');
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+  
+  // Scroll to top functionality
+  document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scrolling
+    });
+  });
+  

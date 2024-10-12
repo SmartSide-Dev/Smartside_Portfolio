@@ -224,6 +224,32 @@ ol {
   padding: 14px 34px 12px;
   width: 100%;
 }
+/* scroll to top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  display: none; /* Initially hidden */
+  z-index: 100;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  background-color: #FFBB12;
+  color: #000000;
+  font-size: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #000000;
+  color: #FFBB12;
+}
+
+.scroll-to-top i {
+  font-size: 20px;
+}
+
+
 
 /* Preloder */
 #preloder {
