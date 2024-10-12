@@ -1,5 +1,1 @@
-[[redirects]]
-  from = "/api/*"
-  to = "https://www.geeksforgeeks.org/"
-  status = 200
-  force = true
+/api/*  https://www.geeksforgeeks.org/:splat  200
