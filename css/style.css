@@ -8,6 +8,8 @@ body {
   font-family: "Josefin Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+  user-select: none; /* Prevents text selection */
+  cursor: default; /* Optionally change the cursor to the default */
 }
 
 h1,
@@ -1423,7 +1425,7 @@ ol {
   border-top: 1px solid #ffbb12;
   padding: 30px 0;
 }
-
+/* 
 .footer__copyright__text {
   margin-bottom: 0;
   font-weight: 300;
@@ -1436,7 +1438,22 @@ ol {
 }
 .footer__copyright__text a:hover {
   color: #ffffff;
+text-decoration: underline;} */
+
+.footer__copyright__text_1 {
+  margin-bottom: 0;
+  font-weight: 300;
+}
+.footer__copyright__text_1 i {
+  color: #FFBB12;
+}
+.footer__copyright__text_1 a {
+  color: #FFBB12;
+}
+.footer__copyright__text_1 a:hover {
+  color: #ffffff;
 text-decoration: underline;}
+
 
 /*---------------------
   Breadcrumb
