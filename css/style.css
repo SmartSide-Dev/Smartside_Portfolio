@@ -9,7 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
   user-select: none; /* Prevents text selection */
-  cursor: default; /* Optionally change the cursor to the default */
+  cursor: default; /* Default cursor */
 }
 
 h1,
