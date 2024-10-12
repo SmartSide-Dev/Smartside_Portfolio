@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>API Request</h1>
+    <button>appiiiii</button>
+
+    <script>
+        const url = 'https://smartside.netlify.app/api'; // Replace with your API endpoint
+
+        const data = {
+            userId: 'super',
+            pwd: 'qwerty',
+            role: 'admin'
+        };
+
+        fetch(url, {
+            method: 'POST', // HTTP method
+            headers: {
+                'Content-Type': 'application/json' // Setting content type to JSON
+            },
+            body: JSON.stringify(data) // Sending the request body as a string
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json(); // Parse the JSON response
+            })
+            .then(result => {
+                console.log('Success:', result); // Handle success
+            })
+            .catch(error => {
+                console.error('Error:', error); // Handle error
+            });
+
+    </script>
+</body>
+
+</html>
