@@ -20,28 +20,28 @@
             role: 'admin'
         };
 
-        // Function to hit the API
         function sendApiRequest() {
-            fetch(url, {
-                method: 'POST', // HTTP method
-                headers: {
-                    'Content-Type': 'application/json' // Setting content type to JSON
-                },
-                body: JSON.stringify(data) // Sending the request body as a string
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json(); // Parse the JSON response
-            })
-            .then(result => {
-                console.log('Success:', result); // Handle success
-            })
-            .catch(error => {
-                console.error('Error:', error); // Handle error
-            });
+    fetch(url, {
+        method: 'POST', // HTTP method
+        headers: {
+            'Content-Type': 'application/json', // Setting content type to JSON
+        },
+        body: JSON.stringify(data), // Sending the request body as a string
+    })
+    .then(response => {
+        console.log('Response status:', response.status); // Log status
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
         }
+        return response.json(); // Parse the JSON response
+    })
+    .then(result => {
+        console.log('Success:', result); // Handle success
+    })
+    .catch(error => {
+        console.error('Error:', error); // Handle error
+    });
+}
 
         // Add event listener to the button
         document.getElementById('apiButton').addEventListener('click', sendApiRequest);
