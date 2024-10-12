@@ -1498,23 +1498,50 @@ text-decoration: underline;}
   margin-right: -10px;
   margin-bottom: 20px;
 } */
+/* Keep the size of the image container fixed */
+.about__pic__item {
+  position: relative;
+  overflow: hidden;
+}
+
 .about__pic__item.about__pic__item--large {
   width: 250px;
   height: 490px;
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
-.about__pic__item.about__pic__item--small1 {
-  width: 235px;
-  height: 235px;
-  margin-right: -10px;
-  margin-bottom: 20px;
-}
+.about__pic__item.about__pic__item--small1, 
 .about__pic__item.about__pic__item--small2 {
   width: 235px;
   height: 235px;
   margin-right: -10px;
   margin-bottom: 20px;
 }
+
+/* Style for the image container */
+.img-container {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+/* Scale the image on hover */
+.about__pic__item:hover .img-container {
+  transform: scale(1.2);
+}
+
+/* Set the background image via data attributes */
+.set-bg {
+  background-image: url('default.jpg'); /* Fallback */
+}
+
+/* [data-setbg] {
+  background-image: url(attr(data-setbg));
+} */
+
 @media (max-width: 768px) {
   .about__pic__item.about__pic__item--small2 {
     width: 100%;
@@ -1778,7 +1805,25 @@ text-decoration: underline;}
     justify-content: center;
      gap: 20px;
   }
+}/* Set up the logo container */
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+
+.logo-img-container img {
+  width: 100%;
+  transition: transform 0.5s ease;
+  object-fit: contain; /* Ensures the logo maintains its aspect ratio */
+}
+
+/* Scale the image on hover */
+.logo__item:hover img {
+  transform: scale(1.2);
+}
+
 /*---------------------
   Portfolio
 -----------------------*/
