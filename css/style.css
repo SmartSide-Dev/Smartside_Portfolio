@@ -82,6 +82,40 @@ ol {
 }
 
 /*---------------------
+ Custom Web Scroll bar
+-----------------------*/
+/* Global scrollbar styles for WebKit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+  border-radius: 10px; /* Rounded corners for track */
+  background-color: #CCCCCC; /* Track color */
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  background-color: #F5F5F5; /* Background color of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+  background-color: #D62929; /* Fallback color for thumb */
+  background-image: -webkit-linear-gradient(90deg,
+      transparent,
+      black 50%,
+      transparent,
+      #ffbb12 50%,
+      #ffbb12); /* Gradient from black to yellow */
+}
+
+/* Global scrollbar styles for Firefox */
+* {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color:#ffbb12 black; /* Thumb color and track color */
+    
+}
+
+
+/*---------------------
   Helper CSS
 -----------------------*/
 .section-title {
