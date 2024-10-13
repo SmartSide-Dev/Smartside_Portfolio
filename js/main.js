@@ -224,3 +224,27 @@ window.onscroll = function() {
     });
   });
   
+
+  //Accordion logics
+  document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const activeHeader = document.querySelector('.accordion-header.active');
+
+        // If there is an active header and it's not the one that was clicked
+        if (activeHeader && activeHeader !== header) {
+            activeHeader.classList.remove('active');
+            activeHeader.nextElementSibling.style.display = 'none'; // Hide the currently active body
+        }
+
+        // Toggle the clicked header
+        header.classList.toggle('active');
+        const body = header.nextElementSibling;
+
+        // Toggle display of the body
+        if (body.style.display === 'block') {
+            body.style.display = 'none';
+        } else {
+            body.style.display = 'block';
+        }
+    });
+});
