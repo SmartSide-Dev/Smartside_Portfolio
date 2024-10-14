@@ -57,7 +57,7 @@ const projects = {
         tags: ['StartUP', 'Culture', 'Entreprenuership']  // Tags for the project
     },
     'project3': {
-        backgroundImage: 'img/project/StartupCulture.png',  // Path to the background image
+        backgroundImage: 'img/project/SocioPotent.png',  // Path to the background image
         title: 'Socio Potent',
         client: 'Krista Starkes',  // client/Client name
         date: 'Jan 03, 2020',  // Date
