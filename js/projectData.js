@@ -8,107 +8,83 @@ const projects = {
         status: 'Completed - Live',  // Project status
         liveUrl: "https://gkevents.netlify.app/",  // Go Live URL for project1
         content: `
-            <p>Videos with a wow factor are always more shareable than those without it. The wow factor
-            is hard to define, but it generally refers to any content that makes viewers think, “Wow!” 
-            For example, consider those viral videos of athletes making insanely difficult basketball trick 
-            shots, such as shooting a basket while doing a backwards flip on a trampoline.</p>
-            <p>That’s the kind of catchy content that makes people want to share it with their friends.
-            With a little clever marketing, you can put that wow factor to work for your business’ videos.</p>
+            <p>We partnered with GK Wedding and Event Management to develop a dynamic and visually appealing website that
+            showcases their services. The platform was designed to be both elegant and functional, providing a seamless experience for visitors.</p>
+            <p> Additionally, we implemented a custom admin panel that allows the business owner to easily update event content in real-time,
+            ensuring the site remains current and engaging.</p>
         `,
         quote: {
             text: 'Create horizontal, square, and vertical videos that are ready to be exported to your Instagram video stories and posts. Perfect for any social network!',
-            client: 'Max Desmarais'
+            client: 'Guna Sekaran'
         },
         description: `
-            <p>An average Internet user watches about 1.5 hours of online video every day. This means 
-            that video can be a powerful marketing tool for getting your message before the eyes of 
-            millions of people. However, not all videos are created equal.</p>
-            <p>Some of them are inherently more shareable on social media than others. Here’s a quick 
-            look at how to make users want to share your videos on social media.</p>
+            <p>The entire project was executed with a focus on smooth development, intuitive design, and efficient functionality.
+            We also handled the deployment and continue to provide ongoing maintenance to ensure optimal performance.</p>
         `,
         tags: ['Wedding', 'Event', 'Moments']  // Tags for the project
     },
     'project2': {
         backgroundImage: 'img/project/StartupCulture.png',  // Path to the background image
         title: 'Startup Culture',  // Project title
-        client: 'Krista Starkes',  // client/Client name
+        client: 'Siva Raghavi',  // client/Client name
         date: 'Jan 03, 2020',  // Date
         status: 'Completed - Live',  // Project status
         liveUrl: "https://startupculturefoundation.in/",  // Go Live URL for project1
         content: `
-            <p>Videos with a wow factor are always more shareable than those without it. The wow factor
-            is hard to define, but it generally refers to any content that makes viewers think, “Wow!” 
-            For example, consider those viral videos of athletes making insanely difficult basketball trick 
-            shots, such as shooting a basket while doing a backwards flip on a trampoline.</p>
-            <p>That’s the kind of catchy content that makes people want to share it with their friends.
-            With a little clever marketing, you can put that wow factor to work for your business’ videos.</p>
+            <p>We collaborated with Startup Culture Foundation to create a dynamic portfolio website that highlights their impactful work within the startup community.
+            The website was designed to showcase their initiatives, projects, and contributions, serving as a comprehensive platform for sharing their vision. </p>
         `,
         quote: {
             text: 'Create horizontal, square, and vertical videos that are ready to be exported to your Instagram video stories and posts. Perfect for any social network!',
-            client: 'Max Desmarais'
+            client: 'Siva Raghavi'
         },
         description: `
-            <p>An average Internet user watches about 1.5 hours of online video every day. This means 
-            that video can be a powerful marketing tool for getting your message before the eyes of 
-            millions of people. However, not all videos are created equal.</p>
-            <p>Some of them are inherently more shareable on social media than others. Here’s a quick 
-            look at how to make users want to share your videos on social media.</p>
+            <p> With a focus on clean, modern design and flawless functionality,
+            we ensured that the portfolio reflects their commitment to fostering growth in the startup ecosystem.</p>
+            <p> As with all our projects, we handled the design, development, deployment, 
+            and continue to provide maintenance to ensure smooth operation.</p>
         `,
         tags: ['StartUP', 'Culture', 'Entreprenuership']  // Tags for the project
     },
     'project3': {
         backgroundImage: 'img/project/SocioPotent.png',  // Path to the background image
         title: 'Socio Potent',
-        client: 'Krista Starkes',  // client/Client name
+        client: 'Sathya Prashanth',  // client/Client name
         date: 'Jan 03, 2020',  // Date
         status: 'Completed - Live',  // Project status
         liveUrl: "https://sociopotents.in/",  // Go Live URL for project1
         content: `
-            <p>Videos with a wow factor are always more shareable than those without it. The wow factor
-            is hard to define, but it generally refers to any content that makes viewers think, “Wow!” 
-            For example, consider those viral videos of athletes making insanely difficult basketball trick 
-            shots, such as shooting a basket while doing a backwards flip on a trampoline.</p>
-            <p>That’s the kind of catchy content that makes people want to share it with their friends.
-            With a little clever marketing, you can put that wow factor to work for your business’ videos.</p>
+            <p>For Socio Potent, we developed a portfolio website that reflects their mission to guide individuals on a personalised journey of self-discovery, skill enhancement, and career advancement.
+             The website serves as a platform to showcase their initiatives and commitment to empowering individuals in achieving their full potential</p>
+            <p>We designed and developed the site with a user-friendly interface, ensuring seamless navigation and an engaging experience. </p>
         `,
         quote: {
             text: 'Create horizontal, square, and vertical videos that are ready to be exported to your Instagram video stories and posts. Perfect for any social network!',
-            client: 'Max Desmarais'
+            client: 'Sathya Prashanth'
         },
         description: `
-            <p>An average Internet user watches about 1.5 hours of online video every day. This means
-            that video can be a powerful marketing tool for getting your message before the eyes of
-            millions of people. However, not all videos are created equal.</p>
-            <p>Some of them are inherently more shareable on social media than others. Here’s a quick
-            look at how to make users want to share your videos on social media.</p>
+            <p> In line with our standard approach, we managed the entire process from design to deployment, and continue to provide ongoing maintenance and support.</p>
         `,
         tags: ['Social', 'Potential', 'People']  // Tags for the project
     },
     'project4': {
         backgroundImage: 'img/project/GRCS.png',  // Path to the background image
         title: 'Geearr consumer solutions',
-        client: 'Krista Starkes',  // client/Client name
+        client: 'Abhishek',  // client/Client name
         date: 'Jan 03, 2020',  // Date
         status: 'Completed - Live',  // Project status
         liveUrl: "https://grcsolutions.in/",  // Go Live URL for project1
         content: `
-            <p>Videos with a wow factor are always more shareable than those without it. The wow factor
-            is hard to define, but it generally refers to any content that makes viewers think, “Wow!”
-            For example, consider those viral videos of athletes making insanely difficult basketball trick
-            shots, such as shooting a basket while doing a backwards flip on a trampoline.</p>
-            <p>That’s the kind of catchy content that makes people want to share it with their friends.
-            With a little clever marketing, you can put that wow factor to work for your business’ videos.</p>
+            <p>For Geearr Consumer Solutions, we developed a comprehensive web application that includes both a portfolio and two tailored dashboards for users and admins.</p>
+            <p>The user dashboard allows individuals to manage their personal details and other essential features, while the admin dashboard provides complete control over the platform's functionality.
+            Additionally, we integrated a full e-commerce section, enabling seamless transactions and product management.</p>
         `,
         quote: {
             text: 'Create horizontal, square, and vertical videos that are ready to be exported to your Instagram video stories and posts. Perfect for any social network!',
-            client: 'Max Desmarais'
+            client: 'Abhishek'
         },
         description: `
-            <p>An average Internet user watches about 1.5 hours of online video every day. This means
-            that video can be a powerful marketing tool for getting your message before the eyes of
-            millions of people. However, not all videos are created equal.</p>
-            <p>Some of them are inherently more shareable on social media than others. Here’s a quick
-            look at how to make users want to share your videos on social media.</p>
+            <p>This holistic solution was designed, developed, deployed, and is continuously maintained to ensure optimal performance and user satisfaction.</p>
         `,
         tags: ['E-Commerce', 'Solutions', 'Consumer']  // Tags for the project
     }
@@ -183,8 +159,8 @@ function loadProjectDetails() {
             tagElement.innerText = tag;
             tagsContainer.appendChild(tagElement);
         });
-          
-    }  else {
+
+    } else if (!project) {
         // Display "Project Not Found" message
         heroSection.style.backgroundImage = "url('img/hero/hero-8.jpg')";  // Default background image
 
@@ -194,7 +170,7 @@ function loadProjectDetails() {
         document.getElementById('projectHeroStatus').innerHTML = '-';
 
         document.getElementById('projectDetailsText').innerHTML = '<p>We could not find the project you were looking for. Please check the project ID or return to the homepage.</p>';
-        document.getElementById('projectQuoteText').innerText = "Sometimes the wrong choices bring us to the right places."; 
+        document.getElementById('projectQuoteText').innerText = "Sometimes the wrong choices bring us to the right places.";
         document.getElementById('projectQuoteClient').innerText = "- Anonymous";
         projectDetailsDesc.innerHTML = '';
         tagsContainer.innerHTML = '<span><i class="fa fa-tag"></i> Tag:</span>';
@@ -213,7 +189,7 @@ function loadProjectDetails() {
 }
 
 // Function to handle button click
-document.getElementById('backButton').addEventListener('click', function() {
+document.getElementById('backButton').addEventListener('click', function () {
     window.location.href = 'index.html#projects';  // Navigate to index.html with #projects
 });
 // Call loadProjectDetails when the page loads
