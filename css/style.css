@@ -2231,8 +2231,8 @@ text-decoration: underline;}
   project Details
 -----------------------*/
 .project-details {
-  background: #100028;
-}
+  background: rgb(19,19,19);
+  background: linear-gradient(180deg,rgba(17,17,17,1) 0%, rgba(0,0,0,1) 100%);}
 
 .project__details__text {
   margin-bottom: 30px;
